@@ -24,15 +24,18 @@ My submission for the code-case includes a .net application serving three operat
 
 # API
 ## Features:
-* CREATE: Creates an account in the db when given a customer ID and an initial deposit of at least 500. Returns an accountDto with accountId, AccountNumber and balance. 
+* ## CREATE:
+* Creates an account in the db when given a customer ID and an initial deposit of at least 500. Returns an accountDto with accountId, AccountNumber and balance. 
 * AccountsController.cs: Performs high level validation to ensure the data is formatted correctly and it meets the business rules
 * IAccountService: performs the operation, where an Account entity is created and inserted using EF core and the dbcontext. It returns a new accountDto to the controller.
 
-* LIST: Returns a list of all associated accounts to the input customer's id 
+* ## LIST:
+* Returns a list of all associated accounts to the input customer's id 
 * AccountsController.cs: Performs high level validation to ensure the data is formatted correctly and it meets the business rules
 * IAccountService: performs the operation, where the account entities are retrieved and mapped to accountDto's before returning them to the caller
 
-* TRANSFER: Transfers an amount (above 0) between two input accounts.
+* ## TRANSFER:
+* Transfers an amount (above 0) between two input accounts.
 * TransferController: Performs high level validation to ensure the data is formatted correctly and it meets the business rules
 * ITransferService: Peforms the neccessary checks to ensure the operation meets the business rules (funds, do both accounts exist) before attempting the transfer. It records the transaction twice, one for the reciever and one for the sender.
 * Account-entity contains domain-specific operations (withdraw, deposit) that are called before they are inserted in the database
