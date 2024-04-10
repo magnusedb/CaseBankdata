@@ -1,0 +1,6 @@
+@CaseBankdata_HostAddress = http://localhost:5259
+
+GET {{CaseBankdata_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
